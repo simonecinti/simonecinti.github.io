@@ -9,5 +9,5 @@ I earn a Bs degree in Engineering in Computer Science at "Sapienza" University o
 I'm also a father and my child's name is Valerio.
 
 That's an unexaustive list of my social accounts:
-  - [LinkedIn](https://www.linkedin.com/in/simone-cinti-1743a659/){:target="_blank"}
-  - [Hackerrank](https://www.hackerrank.com/sim083){:target="_blank"}
+  - [LinkedIn](https://www.linkedin.com/in/simone-cinti-1743a659/)
+  - [Hackerrank](https://www.hackerrank.com/sim083)
