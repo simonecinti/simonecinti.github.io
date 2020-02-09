@@ -1,4 +1,4 @@
-#### BIO
+## BIO
 
 ![My picture](/images/me.jpg)
 
@@ -15,6 +15,6 @@ That's an unexaustive list of my social accounts:
   - [Hackerrank](https://www.hackerrank.com/sim083)
 
 
-#### CONTACTS
+## CONTACTS
  
 e-mail: simone83.cinti (at) gmail.com
