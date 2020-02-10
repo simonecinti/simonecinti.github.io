@@ -1,4 +1,4 @@
-## BIO
+## <a id="bio" href="#">BIO</a>
 
 ![My picture](/images/me.jpg)
 
@@ -11,12 +11,11 @@ I earn a Bs degree in Engineering in Computer Science at "Sapienza" University o
 I'm also father of a little child, Valerio.
 
 Here's a brief list of my accounts on socials:
-  - [LinkedIn](https://www.linkedin.com/in/simone-cinti-1743a659/)
-  - [Hackerrank](https://www.hackerrank.com/sim083)
-
+  - <a href="https://www.linkedin.com/in/simone-cinti-1743a659/" target="_blank">LinkedIn</a>
+  - <a href="https://www.hackerrank.com/sim083" target="_blank">Hackerrank</a>
 
 ## CONTACTS
  
-e-mail: simone83.cinti (at) gmail (dot) com
+<a href="#bio">BIO</a> | <a href="#weblog">WebLog</a>
 
-Thank you!
+Copyright &copy; Simone Cinti - 2020 | e-mail: <a href="mailto:simone83.cinti@gmail.com">simone83.cinti@gmail.com</a>
