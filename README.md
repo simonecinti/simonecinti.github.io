@@ -2,9 +2,7 @@
 
 ![My picture](/images/me.jpg)
 
-[Go to my WebLog page](https://simonecinti.github.io/weblog)
-
-Welcome to my page!
+Welcome to my page! You would also visit [My WebLog page](https://simonecinti.github.io/weblog)
 
 My name is Simone and I'm a web applications developer and an enthusiast of Math and Computer Science.
 
