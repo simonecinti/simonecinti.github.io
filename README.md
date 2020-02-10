@@ -14,8 +14,7 @@ Here's a brief list of my accounts on socials:
   - <a href="https://www.linkedin.com/in/simone-cinti-1743a659/" target="_blank">LinkedIn</a>
   - <a href="https://www.hackerrank.com/sim083" target="_blank">Hackerrank</a>
 
-## CONTACTS
- 
-<a href="#bio">BIO</a> | <a href="#weblog">WebLog</a>
+
+<a href="#bio">BIO</a> | <a href="weblog">WebLog</a>
 
 Copyright &copy; Simone Cinti - 2020 | e-mail: <a href="mailto:simone83.cinti@gmail.com">simone83.cinti@gmail.com</a>
