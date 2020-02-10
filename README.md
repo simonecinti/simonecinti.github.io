@@ -2,6 +2,8 @@
 
 ![My picture](/images/me.jpg)
 
+[Go to my WebLog page](https://simonecinti.github.io/index.html)
+
 Welcome to my page!
 
 My name is Simone and I'm a web applications developer and an enthusiast of Math and Computer Science.
