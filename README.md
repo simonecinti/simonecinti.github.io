@@ -1,4 +1,4 @@
-## [BIO](#bio) | [WebLog](/weblog)
+[BIO](#bio) | [WebLog](/weblog)
 
 ![My picture](/images/me.jpg)
 
