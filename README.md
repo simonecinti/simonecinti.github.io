@@ -1,4 +1,4 @@
-## <a id="bio" href="#">BIO</a> | <a href="weblog">WebLog</a>
+## [BIO](#bio) | [WebLog](/weblog)
 
 ![My picture](/images/me.jpg)
 
