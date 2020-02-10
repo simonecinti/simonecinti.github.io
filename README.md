@@ -2,7 +2,7 @@
 
 ![My picture](/images/me.jpg)
 
-[Go to my WebLog page](https://simonecinti.github.io/weblog/index.html)
+[Go to my WebLog page](https://simonecinti.github.io/weblog)
 
 Welcome to my page!
 
