@@ -11,6 +11,7 @@ import org.osgi.util.tracker.ServiceTracker;
 // Use: _getServiceImpl(clazzName) to get service or components implementations from ServiceTracker.
 // For instance, the script shows how to get a runtime UserLocalService implementation
 //
+// Tested with Liferay 7.0 CE / DXP
 // author: Simone Cinti
 //------------------------------------------
 
