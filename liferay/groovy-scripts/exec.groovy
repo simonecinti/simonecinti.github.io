@@ -8,6 +8,8 @@ import java.util.Map;
 // Groovy executor
 // ------------------------------------
 // 22/05/2020 - Liferay 7.0 CE / DXP
+
+// author: Simone Cinti
 // ------------------------------------
 
 String scriptFileName = "/tmp/the_script_file_name.groovy";
