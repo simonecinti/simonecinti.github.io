@@ -26,10 +26,11 @@ import java.util.List;
 import java.util.Set;
 import javax.portlet.PortletPreferences;
 
-long plid = 36693L;
+long plid = 20146L;
 Layout layout = LayoutLocalServiceUtil.getLayout(plid);
 
-_getPortletPreferencesByLayoutAndPartialPortletId(layout , "_portlet");
+JSONObject result = _getPortletPreferencesByLayoutAndPartialPortletId(layout , "_");
+out.println(result.toString());
 
 def _getPortletPreferencesByLayoutAndPartialPortletId(layout, partialPortletId) {
 	JSONObject result = JSONFactoryUtil.createJSONObject();
@@ -54,8 +55,10 @@ def _getPortletPreferencesByLayoutAndPartialPortletId(layout, partialPortletId) 
 def _getPortletPreferencesJSONObject(layout, portletId) {
 	JSONObject result = null;
 	try {
-               out.println("getting preferences for portletId : " + portletId + " and layout plid: " + layout.getPlid());
+
 		PortletPreferences preferences = PortletPreferencesFactoryUtil.getLayoutPortletSetup(layout, portletId);
+
+
 		if (preferences != null && !preferences.getMap().isEmpty()) {
 			out.println("getting preferences for layout: '" + layout.getFriendlyURL() + "' plid: " + layout.getPlid() + ", portletId: '" + portletId + "'");
 			result = JSONFactoryUtil.createJSONObject();
