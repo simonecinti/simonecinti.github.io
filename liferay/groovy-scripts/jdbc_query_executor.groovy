@@ -29,7 +29,7 @@ import java.util.Set;
 	String queryToExecute = "select userId,screenname from user_";
 
 // Tested with Liferay 7.0 CE / DXP
-// author: Simone Cinti - 25/05/2020
+// author: Simone Cinti - 04/06/2020
 //----------------------------------------------------------
 
 try { 
