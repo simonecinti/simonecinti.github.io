@@ -10,7 +10,7 @@ String commandToExecute = "cd";
 
 // Tested with Liferay 7.0 CE / DXP
 // author: Simone Cinti - 25/05/2020
-//---------------
+//-----------------------------------------------------------
 
 
 try {
