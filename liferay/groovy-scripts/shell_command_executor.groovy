@@ -1,9 +1,10 @@
+import com.liferay.portal.kernel.util.OSDetector;
+
 //----------------------------------------------------------
 // Execute shell command - Groovy script  
 //----------------------------------------------------------
 //
 
-boolean runOnWindows = true;
 String commandToExecute = "cd";
 
 
@@ -13,8 +14,17 @@ String commandToExecute = "cd";
 
 
 try {
+	_executeCmd(commandToExecute);
+} catch (Exception ex) {
+	ex.printStackTrace(out);
+}
+
+
+def _executeCmd(commandToExecute) throws Exception {
+	boolean isWin = OSDetector.isWindows();
 	ProcessBuilder processBuilder = new ProcessBuilder();
-	if (runOnWindows ) {
+
+	if (isWin) {
 		processBuilder.command("cmd.exe", "/c", commandToExecute);
 	}
 	else {
@@ -40,7 +50,4 @@ try {
 	} else {
 		out.println("Command execution for '" + commandToExecute + "' failed with exit code: " + exitCode);
 	}
-
-} catch (Exception e) {
-     e.printStackTrace(out);
 }
