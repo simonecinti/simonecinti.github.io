@@ -14,7 +14,7 @@
 # ----------------------------------------------------------------
 
 if [ "$#" -ne 2 ]; then
-    echo 'zfind - illegal number of parameters. Usage: ./zfind.sh "filename-or-wildcard" "pattern-to-search"'
+    echo 'zfind.sh - illegal number of parameters. Usage: ./zfind.sh "filename-or-wildcard" "pattern-to-search"'
     exit -1
 fi
 
