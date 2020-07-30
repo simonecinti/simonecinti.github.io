@@ -4,6 +4,11 @@
 #
 # usage:  ./zfind.sh "filename-or-wildcard" "pattern-to-search" 
 #
+# example: ./zfind.sh "*.jar" ".class"
+#         Gets lists all file names having ".class" inside the
+#         "*.jar" archives 
+#          
+#
 # author: Simone Cinti - 2020-07-30
 #
 # ----------------------------------------------------------------
