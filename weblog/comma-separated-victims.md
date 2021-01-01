@@ -2,7 +2,7 @@
 
 Quante volte ti è capitato di aver a che fare con l'export dei dati in formato CSV?
 Diverse volte, suppongo.
-Sei consapevole dei rischi a cui potresti andare incontro sottovalutando alcune vulnerabilità nello sviluppo di una componente per l'export dei dati in formato CSV, che potrebbero consentire una serie di attacchi quali  **Remote Code Execution**  o **Data Breach**.
+Sei consapevole dei rischi a cui potresti andare incontro sottovalutando alcune vulnerabilità nello sviluppo di una componente per l'export dei dati in formato CSV, che potrebbero consentire una serie di attacchi quali  **Remote Code Execution**  o **Data Breach**?
 Se non hai mai sentito parlare di **Injection** e, più precisamente di **Formula Injection** o di **CSV Injection**,  allora questo articolo farà certamente al caso tuo.
 
 Nel mio [precedente articolo](https://techblog.smc.it/it/2020-06-19/injection-attacks-how-to-prevent-with-liferay) su questo techblog avevo già illustrato come gli attacchi di tipo Injection possono rappresentare un serio rischio per la sicurezza dei tuoi dati, e come prevenirli con Liferay.
