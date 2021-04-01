@@ -70,9 +70,8 @@ com.liferay.portal.kernel.model.PortletPreferences portletPreferencesModel =
 	try {
 		portletPreferences.setValues(
 			"notifiedAssetEntryIds",
-			StringUtil.split(
-				ListUtil.toString(newAssetEntryIds, "") )
-				   );
+			StringUtil.split( ListUtil.toString(newAssetEntryIds, "") )
+		);
 
 		out.println("storing preferences for portletPreferencesId: " + portletPreferencesId);
 		portletPreferences.store();
